@@ -2,6 +2,11 @@ import numpy as np
 import random
 import math
 
+# call move class in main by following step:
+# AnyNameYouLike = move()
+# and inside your for loop:
+#   turnangle(omega) = AnyNameYouLike(frount_sensor_data, right_sensor_data, left_sensor_data)
+#   and the rest is your part
 class move():
     def __init__(self):
         self.pose = 0
@@ -55,6 +60,7 @@ class move():
             elif y < 2:
                 self.pose = 1
             self.count = 0
+        return y
         '''
         #root2
         if frount < self.branch_two[0]:
@@ -67,7 +73,7 @@ class move():
             self.output_one = 3
         else:
             self.output_one = 4
-            
+
         #root3
         if lr < self.branch_three[0]:
             y = -4
