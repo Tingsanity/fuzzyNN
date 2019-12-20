@@ -4,7 +4,7 @@ import math
 
 # call move class in main by following step:
 # AnyNameYouLike = move()
-# and inside your for loop:
+# and inside your FOR LOOP:
 #   turnangle(omega) = AnyNameYouLike(frount_sensor_data, right_sensor_data, left_sensor_data)
 #   and the rest is your part
 class move():
@@ -17,9 +17,9 @@ class move():
         self.branch_two = np.array([30,45])
         self.branch_three = np.array([-5,5])
     def decision_tree(self,frount,right,left):
-        if self.right != -1
+        if self.right != -1:
             dr = right - self.rigth
-        if self.left != -1
+        if self.left != -1 :
             dl = left - self.left
         self.rigth = right
         self.left = left
@@ -29,16 +29,16 @@ class move():
         if self.pose == 0:
             if frount <= self.branch_two[0]:
                 if lr < self.branch_three[0]:
-                    y = 4.5 / (1 + math.exp(-0.5 * lr)
+                    y = 4.5 / (1 + math.exp(-0.5 * lr))
                 elif lr > self.branch_three[1]:
-                    y = 4.5 / (1 + math.exp(-0.5 * lr)
+                    y = 4.5 / (1 + math.exp(-0.5 * lr))
                 else:
                     y = random.random() * 2 - 1
             elif frount <= self.branch_two[1]:
                 if lr < self.branch_three[0]:
-                    y = 1 / (1 + math.exp(-0.5 * lr)
+                    y = 1 / (1 + math.exp(-0.5 * lr))
                 elif lr > self.branch_three[1]:
-                    y = 1 / (1 + math.exp(-0.5 * lr)
+                    y = 1 / (1 + math.exp(-0.5 * lr))
                 else:
                     y = random.random() * 0.6 - 0.3
             else:
